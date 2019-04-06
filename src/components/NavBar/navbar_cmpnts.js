@@ -39,22 +39,33 @@ const LogoDiv = styled.div`
 const NavBarTxt = styled.div`
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   line-height: normal;
 
   color: #FFFFFF;
   margin: auto 30px;
+  background: rgba(255,255,255, 0.15);
+
+  height: auto;
+  width: auto;
+  padding: 5px 20px;
+  border-radius: 30px;
 `;
 
 const YourPodcastsNavBarTxt = styled.div`
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   line-height: normal;
 
   color: #FFFFFF;
   margin: auto 30px;
-  background: rgba(255,255,255, 0.9);
+  background: rgba(255,255,255, 0.2);
+
+  height: auto;
+  width: auto;
+  padding: 5px 20px;
+  border-radius: 30px;
 `;
 
 const AccountName = styled.div`
