@@ -23,20 +23,22 @@ const LeftNavBar = styled.div`
 
 const LogoDiv = styled.div`
 
-  font-family: Inter UI;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: normal;
-  letter-spacing: -0.06em;
+  letter-spacing: 0.06em;
 
   color: #FFFFFF;
 
   display: flex;
+  margin: auto 20px auto 0;
 
 `;
 
 const NavBarTxt = styled.div`
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -53,6 +55,7 @@ const NavBarTxt = styled.div`
 `;
 
 const YourPodcastsNavBarTxt = styled.div`
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -69,6 +72,7 @@ const YourPodcastsNavBarTxt = styled.div`
 `;
 
 const AccountName = styled.div`
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
