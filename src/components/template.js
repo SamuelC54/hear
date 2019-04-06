@@ -4,8 +4,8 @@ import renderIf from "render-if";
 import styled, { css } from "styled-components";
 import useReactRouter from "use-react-router";
 
-import logo from "../assets/logo.png";
-import userHeader from "../assets/userHeader.png";
+// import logo from "../assets/logo.png";
+// import userHeader from "../assets/userHeader.png";
 
 const Root = styled.div`
   background: rgba(248, 248, 248, 1);
@@ -81,9 +81,9 @@ export default function Template({ children }: any) {
     <Root>
       <Header>
         <Row>
-          <img src={logo} />
+          {/* <img src={logo} /> */}
           <Spacer />
-          <img src={userHeader} />
+          {/* <img src={userHeader} /> */}
         </Row>
         <Spacer />
         <Row>

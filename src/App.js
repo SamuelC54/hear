@@ -18,6 +18,7 @@ import {
 import { Column, Table } from "react-virtualized";
 
 import Template from "./components/template";
+import NavBar from "./components/NavBar/NavBar";
 
 
 // google account: oglavichackathons@gmail.com
@@ -50,7 +51,7 @@ const RowDiv = styled.div`
 export default function App() {
   return (
     <>
-      <Title>Title</Title>
+      <NavBar />
     </>
   );
 }
