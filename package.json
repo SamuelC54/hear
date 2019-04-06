@@ -1,0 +1,49 @@
+{
+  "name": "oglavic",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "3.9.2",
+    "@material-ui/icons": "3.0.2",
+    "ajv": "6.8.1",
+    "babel-loader": "8.0.5",
+    "chart.js": "^2.7.3",
+    "firebase": "5.8.2",
+    "fuse.js": "3.4.4",
+    "lodash": "4.17.11",
+    "mauerwerk": "2.0.2",
+    "mdi-react": "5.2.0",
+    "moment": "^2.23.0",
+    "rc-progress": "^2.3.0",
+    "react": "^16.7.0",
+    "react-chartjs-2": "^2.7.4",
+    "react-dom": "^16.7.0",
+    "react-google-maps": "9.4.5",
+    "react-router-dom": "4.4.0-beta.6",
+    "react-scripts": "2.1.8",
+    "react-virtualized": "9.21.0",
+    "react-spring": "8.0.15",
+    "render-if": "0.1.1",
+    "styled-components": "^4.1.3",
+    "use-react-router": "1.0.3"
+  },
+  "resolutions": {
+    "ajv": "6.8.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "now-build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
