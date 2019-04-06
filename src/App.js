@@ -17,8 +17,8 @@ import {
 } from "react-google-maps";
 import { Column, Table } from "react-virtualized";
 
-import Template from "./components/template";
 import NavBar from "./components/NavBar/NavBar";
+import Content from "./components/Content/Content";
 
 
 // google account: oglavichackathons@gmail.com
@@ -36,22 +36,11 @@ firebase.initializeApp({
 
 const firestore = firebase.firestore();
 
-const StyledDiv = styled.div``;
-
-const RowDiv = styled.div`
-  width: 1000px;
-  display: flex;
-  padding: 0px 20px;
-  outline: 1px solid #666;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-`;
-
 export default function App() {
   return (
     <>
       <NavBar />
+      <Content />
     </>
   );
 }
