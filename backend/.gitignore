@@ -1,0 +1,9 @@
+node_modules
+dist
+.idea
+package-lock.json
+.env
+*.code-workspace
+coverage
+.nyc_output
+config_files
