@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 const NavBarBGDiv = styled.div`
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   width: 100%;
   height: 80px;
-  background: linear-gradient(270deg, #5E12E0 0%, #7D27E1 100%);
+  background: linear-gradient(270deg, #5e12e0 0%, #7d27e1 100%);
 
   display: flex;
   flex-direction: row;
-  
+
   padding: 15px 100px;
 `;
 
@@ -20,16 +20,16 @@ const LeftNavBar = styled.div`
   justify-content: space-between;
 `;
 
-const LogoDiv = styled.div`
-
-  font-family: 'Roboto';
+const LogoDiv = styled.img`
+  font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: normal;
   letter-spacing: 0.06em;
+  height: 44px;
 
-  color: #FFFFFF;
+  color: #ffffff;
 
   display: flex;
   margin: auto 20px auto 0;
@@ -37,15 +37,15 @@ const LogoDiv = styled.div`
 `;
 
 const NavBarTxt = styled.div`
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: normal;
 
-  color: #FFFFFF;
+  color: #ffffff;
   margin: auto 30px;
-  background: rgba(255,255,255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
 
   height: auto;
   width: auto;
@@ -55,15 +55,15 @@ const NavBarTxt = styled.div`
 `;
 
 const YourPodcastsNavBarTxt = styled.div`
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: normal;
 
-  color: #FFFFFF;
+  color: #ffffff;
   margin: auto 30px;
-  background: rgba(255,255,255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
 
   height: auto;
   width: auto;
@@ -73,13 +73,13 @@ const YourPodcastsNavBarTxt = styled.div`
 `;
 
 const AccountName = styled.div`
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: normal;
 
-  color: #FFFFFF;
+  color: #ffffff;
   margin: auto 10px;
   cursor: pointer;
 `;
@@ -109,14 +109,10 @@ export {
   NavBarBGDiv,
   LeftNavBar,
   LogoDiv,
-  
   YourPodcastsNavBarTxt,
   NavBarTxt,
-  
   AccountWrapper,
   AccountLogo,
   AccountName,
   DropDown
-
-  
-}
+};

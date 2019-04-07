@@ -4,7 +4,6 @@ const BodyWrapper = styled.div`
   display: flex;
   background: lightpink;
   padding-top: 80px;
-  height: auto;
   width: 100vw;
   flex-direction: row;
 `;
@@ -12,7 +11,7 @@ const BodyWrapper = styled.div`
 const LeftPanel = styled.div`
   background: #e8e8e8;
   width: 35%;
-  border-right: 2.5px solid #8e8e8e;
+  border-right: 2px solid #d2d2d2;
   padding: 0 85px;
   padding-top: 60px;
   height: auto;
@@ -25,7 +24,7 @@ const RightPanelWrapper = styled.div`
 `;
 
 const RightPanel = styled.div`
-  background: #FFFFFF;
+  background: #ffffff;
   padding-left: 60px;
   padding-top: 40px;
   height: auto;
@@ -35,16 +34,15 @@ const Header = styled.div`
   background-image: url(${props => props.img});
   overflow: hidden;
   height: auto;
-  width: 100%;
+  z-index: 10;
 `;
 
 const HeaderOpaque = styled.div`
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   margin: auto auto;
   padding: 55px 100px;
-
 `;
 
 const EpisodeInfo = styled.div`
@@ -65,7 +63,7 @@ const Title = styled.div`
   font-size: 28px;
   letter-spacing: 0.1em;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 
   font-weight: 600;
   margin-bottom: 20px;
@@ -75,7 +73,7 @@ const Author = styled.div`
   font-size: 22px;
   letter-spacing: 0.1em;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 
   font-weight: 400;
 `;
@@ -89,7 +87,7 @@ const TranscriptText = styled.div`
   font-size: 18px;
   letter-spacing: 0.05em;
   line-height: 2em;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   margin-bottom: 1em;
   width: 65%;
 `;
@@ -98,17 +96,17 @@ const Category = styled.div`
   width: 35%;
   text-align: center;
   padding: 20px 25px;
+  z-index: 10;
 `;
 
 const CategoryButton = styled.div`
   font-size: 15px;
   letter-spacing: 0.05em;
   line-height: 2em;
-  font-family: 'Roboto';
-  background: #F0F0F0;
+  font-family: "Roboto";
+  background: #f0f0f0;
   padding: 0px 5px;
   color: black;
-  border-radius: 15px;
 `;
 
 export {
@@ -116,7 +114,6 @@ export {
   LeftPanel,
   RightPanelWrapper,
   RightPanel,
-
   Header,
   HeaderOpaque,
   EpisodeInfo,
@@ -124,9 +121,8 @@ export {
   EpText,
   Title,
   Author,
-  
   ParagraphWrapper,
   TranscriptText,
   Category,
   CategoryButton
-}
+};

@@ -2,7 +2,7 @@
 /*global google*/
 
 import _ from "lodash";
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 
 import NavBar from "./components/NavBar/NavBar";
@@ -32,32 +32,36 @@ export default function App() {
     });
   }, []);
 
-
   if (!data) {
-    return (
-      <>
-      </>
-    );
-  };
+    return <></>;
+  }
 
   console.log(data);
-  const entities = _.filter(data.entitiesResult.entities, (entity) => {
-    return entity.wikipedia_url
+  const entities = _.filter(data.entitiesResult.entities, entity => {
+    return entity.wikipedia_url;
   });
   console.log(entities);
 
-  const entitiesDict = {}
-  _.forEach(entities, (entity) => {
-    entitiesDict[entity.name] = entity.wikipedia_url
-  })
+  const entitiesDict = {};
+  _.forEach(entities, entity => {
+    entitiesDict[entity.name] = {
+      wikipedia_url: entity.wikipedia_url,
+      picture: entity.picture,
+      summary: entity.summary
+    };
+  });
 
-  const numParagraphs = (data.transcriptions).length;
+  const numParagraphs = data.transcriptions.length;
   console.log(numParagraphs);
 
   return (
     <>
       <NavBar />
-      <Content categories={data.categoryResult} entities={entitiesDict} numParagraphs={numParagraphs}/>
+      <Content
+        categories={data.categoryResult}
+        entities={entitiesDict}
+        numParagraphs={numParagraphs}
+      />
       <MusicBar />
     </>
   );
