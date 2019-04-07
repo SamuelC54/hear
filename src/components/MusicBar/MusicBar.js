@@ -275,6 +275,8 @@ export default function MusicBar() {
   const [volume, setVolume] = useState(0.8);
   const [played, setPlayed] = useState(0);
 
+
+
   useEffect(() => {
     if (playing) {
       console.log("playing");
@@ -285,6 +287,14 @@ export default function MusicBar() {
       setIntervalState(intervalInstance);
     } else {
       clearInterval(intervalState);
+    }
+  }, [playing]);
+
+  useEffect(() => {
+    if (!playing) {
+      console.log(played);
+      
+      window.scrollTo(0, document.documentElement.scrollHeight*played);
     }
   }, [playing]);
 
