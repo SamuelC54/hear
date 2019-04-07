@@ -3,12 +3,12 @@ import renderIf from "render-if";
 import styled, { css } from "styled-components";
 import ReactPlayer from "react-player";
 
-import song from "../../assets/song1.mp3";
+import song from "../../assets/41_Jared_Palmer.mp3";
 import PlayCircleOutlineIcon from "mdi-react/PlayCircleOutlineIcon";
 import PauseCircleOutlineIcon from "mdi-react/PauseCircleOutlineIcon";
 import SkipNextIcon from "mdi-react/SkipNextIcon";
 import SkipPreviousIcon from "mdi-react/SkipPreviousIcon";
-import albumMusic from "../../assets/albumMusic.png";
+import albumMusic from "../../assets/react.jpg";
 import VolumeHighIcon from "mdi-react/VolumeHighIcon";
 
 const MusicDiv = styled.div`
@@ -272,14 +272,14 @@ export default function MusicBar() {
     setPlaying(!playing);
   };
   const onDuration = duration => {
-    console.log("onDuration", duration);
+    // console.log("onDuration", duration);
     setDuration(duration);
   };
   const setVolumePlayer = e => {
     setVolume(parseFloat(e.target.value));
   };
   const onProgess = state => {
-    console.log(state);
+    // console.log(state);
     if (!seek) {
       setPlayed(state.played);
     }
@@ -310,8 +310,8 @@ export default function MusicBar() {
         <SongImageDescription>
           <SongImage src={albumMusic} />
           <SongDescription>
-            <SongLabel>Aero cloud</SongLabel>
-            <SongMiniText>Surface</SongMiniText>
+            <SongLabel>React Podcast</SongLabel>
+            <SongMiniText>41: Be Super with TypeScript and Jared Palmer. On the when, where, what, why, and how much of TypeScript in React.</SongMiniText>
           </SongDescription>
         </SongImageDescription>
         <ControlSection>
