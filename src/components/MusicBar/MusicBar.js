@@ -265,13 +265,29 @@ const Slider = styled.input`
     background: #ffffff;
   }
 `;
+
 export default function MusicBar() {
+  const [intervalState, setIntervalState] = useState(null);
   const player = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [seek, setSeek] = useState(false);
   const [duration, setDuration] = useState(null);
   const [volume, setVolume] = useState(0.8);
   const [played, setPlayed] = useState(0);
+
+  useEffect(() => {
+    if (playing) {
+      console.log("playing");
+      const intervalInstance = setInterval(() => {
+        window.scrollBy(0, 1);
+      }, 80);
+
+      setIntervalState(intervalInstance);
+    } else {
+      clearInterval(intervalState);
+    }
+  }, [playing]);
+
   const playPauseMusic = () => {
     setPlaying(!playing);
   };
