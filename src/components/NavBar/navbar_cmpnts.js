@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 const NavBarBGDiv = styled.div`
-  position: absolute;
-  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
   height: 80px;
-  left: 0px;
-  top: 0px;
   background: linear-gradient(270deg, #5E12E0 0%, #7D27E1 100%);
 
   display: flex;
@@ -34,7 +33,7 @@ const LogoDiv = styled.div`
 
   display: flex;
   margin: auto 20px auto 0;
-
+  cursor: pointer;
 `;
 
 const NavBarTxt = styled.div`
@@ -52,6 +51,7 @@ const NavBarTxt = styled.div`
   width: auto;
   padding: 5px 20px;
   border-radius: 30px;
+  cursor: pointer;
 `;
 
 const YourPodcastsNavBarTxt = styled.div`
@@ -69,6 +69,7 @@ const YourPodcastsNavBarTxt = styled.div`
   width: auto;
   padding: 5px 20px;
   border-radius: 30px;
+  cursor: pointer;
 `;
 
 const AccountName = styled.div`
@@ -80,6 +81,7 @@ const AccountName = styled.div`
 
   color: #FFFFFF;
   margin: auto 10px;
+  cursor: pointer;
 `;
 
 const AccountWrapper = styled.div`
@@ -100,6 +102,7 @@ const DropDown = styled.div`
   width: auto;
   height: auto;
   margin: auto auto;
+  cursor: pointer;
 `;
 
 export {
