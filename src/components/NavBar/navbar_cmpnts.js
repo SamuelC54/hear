@@ -23,41 +23,56 @@ const LeftNavBar = styled.div`
 
 const LogoDiv = styled.div`
 
-  font-family: Inter UI;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: normal;
-  letter-spacing: -0.06em;
+  letter-spacing: 0.06em;
 
   color: #FFFFFF;
 
   display: flex;
+  margin: auto 20px auto 0;
 
 `;
 
 const NavBarTxt = styled.div`
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   line-height: normal;
 
   color: #FFFFFF;
   margin: auto 30px;
+  background: rgba(255,255,255, 0.15);
+
+  height: auto;
+  width: auto;
+  padding: 5px 20px;
+  border-radius: 30px;
 `;
 
 const YourPodcastsNavBarTxt = styled.div`
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   line-height: normal;
 
   color: #FFFFFF;
   margin: auto 30px;
-  background: rgba(255,255,255, 0.9);
+  background: rgba(255,255,255, 0.2);
+
+  height: auto;
+  width: auto;
+  padding: 5px 20px;
+  border-radius: 30px;
 `;
 
 const AccountName = styled.div`
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

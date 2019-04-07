@@ -17,9 +17,9 @@ import {
 } from "react-google-maps";
 import { Column, Table } from "react-virtualized";
 import ReactPlayer from "react-player";
-import Template from "./components/template";
 import NavBar from "./components/NavBar/NavBar";
 import MusicBar from "./components/MusicBar/MusicBar";
+import Content from "./components/Content/Content";
 // google account: oglavichackathons@gmail.com
 // pass: y9de%ua03CbKPlehnkrnH4!rhrqo@tY%k4
 
@@ -34,26 +34,13 @@ firebase.initializeApp({
 
 const firestore = firebase.firestore();
 
-const StyledDiv = styled.div``;
-
-const RowDiv = styled.div`
-  width: 1000px;
-  display: flex;
-  padding: 0px 20px;
-  outline: 1px solid #666;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-`;
-
-
 export default function App() {
 
   return (
     <>
       <NavBar />
-      {/* <SuperDiv>{ (( player.current && player.current.getCurrentTime()===null)? "1": player.current.getCurrentTime())}</SuperDiv> */}
-     <MusicBar/>
+      <Content />
+      <MusicBar/>
     </>
   );
 }
