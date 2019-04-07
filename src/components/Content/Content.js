@@ -31,17 +31,20 @@ import "./content.css";
 
 import testtranscript from "../../assets/testtranscript.json";
 
-import albumMusic from '../../assets/podcastCoverPlay.png';
-import podcastBG from '../../assets/podcastBG.png';
+import albumMusic from "../../assets/podcastCoverPlay.png";
+import podcastBG from "../../assets/podcastBG.png";
 
 export default function Content(props) {
   const leng = Array(props.numParagraphs);
+
+  const sortedEntities = _.sortBy(props.entities, ["wikipedia_url"]);
+  console.log("sortedEntities", sortedEntities);
 
   return (
     <>
       <BodyWrapper>
         <LeftPanel>
-          {_.map(props.entities, (entity, i) => (
+          {_.map(sortedEntities, (entity, i) => (
             <StyledCard key={i}>
               <CardActionArea className="card_actionarea">
                 <CardMedia
@@ -64,7 +67,7 @@ export default function Content(props) {
           <Header img={podcastBG}>
             <HeaderOpaque>
               <EpisodeInfo>
-                <EpCover src={albumMusic}/>
+                <EpCover src={albumMusic} />
                 <EpText>
                   <Title>99% Invisible</Title>
                   <Author>Roman Mars</Author>

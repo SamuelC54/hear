@@ -41,7 +41,7 @@ export default function App() {
   console.log(entities);
 
   const entitiesDict = {};
-  _.forEach(entities, entity => {
+  _.forEach(entities, (entity, i) => {
     entitiesDict[entity.name] = {
       wikipedia_url: entity.wikipedia_url,
       picture: entity.picture,
