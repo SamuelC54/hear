@@ -8,8 +8,6 @@ import firebase from "firebase";
 import NavBar from "./components/NavBar/NavBar";
 import MusicBar from "./components/MusicBar/MusicBar";
 import Content from "./components/Content/Content";
-// google account: oglavichackathons@gmail.com
-// pass: y9de%ua03CbKPlehnkrnH4!rhrqo@tY%k4
 
 firebase.initializeApp({
   apiKey: "AIzaSyAvkLDjAaxFKIpZyR1Jv6VD7loYDyb-0_k",
