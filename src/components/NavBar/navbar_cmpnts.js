@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const NavBarBGDiv = styled.div`
   position: fixed;
-  z-index: 0;
-  width: 100vw;
+  z-index: 10;
+  width: 100%;
   height: 80px;
   background: linear-gradient(270deg, #5E12E0 0%, #7D27E1 100%);
 
