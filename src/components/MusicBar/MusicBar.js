@@ -291,7 +291,7 @@ export default function MusicBar() {
   }, [playing]);
 
   useEffect(() => {
-    if (!playing) {
+    if (playing) {
       console.log(played);
       
       window.scrollTo(0, document.documentElement.scrollHeight*played);
