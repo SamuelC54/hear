@@ -31,7 +31,8 @@ const RightPanel = styled.div`
 `;
 
 const Header = styled.div`
-  background: lightblue;
+  background-image: url(${props => props.img});
+  overflow: hidden;
   height: auto;
   z-index: 10;
 `;
@@ -49,10 +50,9 @@ const EpisodeInfo = styled.div`
   flex-direction: row;
 `;
 
-const EpCover = styled.div`
+const EpCover = styled.img`
   height: 100px;
   width: 100px;
-  background: lightblue;
 `;
 
 const EpText = styled.div`

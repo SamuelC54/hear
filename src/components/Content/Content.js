@@ -31,7 +31,8 @@ import "./content.css";
 
 import testtranscript from "../../assets/testtranscript.json";
 
-import Truck from "../../assets/test.png";
+import albumMusic from '../../assets/podcastCoverPlay.png';
+import podcastBG from '../../assets/podcastBG.png';
 
 export default function Content(props) {
   const leng = Array(props.numParagraphs);
@@ -60,13 +61,13 @@ export default function Content(props) {
         </LeftPanel>
 
         <RightPanelWrapper>
-          <Header>
+          <Header img={podcastBG}>
             <HeaderOpaque>
               <EpisodeInfo>
-                <EpCover />
+                <EpCover src={albumMusic}/>
                 <EpText>
-                  <Title>Title</Title>
-                  <Author>Author</Author>
+                  <Title>99% Invisible</Title>
+                  <Author>Roman Mars</Author>
                 </EpText>
               </EpisodeInfo>
             </HeaderOpaque>
