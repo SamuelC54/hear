@@ -105,6 +105,7 @@ export default function Content(props) {
           </RightPanel>
         </RightPanelWrapper>
       </BodyWrapper>
+      <VerticalLine />
     </>
   );
 }
@@ -113,4 +114,14 @@ const StyledCard = styled(Card)`
   && {
     margin: 16px 0;
   }
+`;
+
+const VerticalLine = styled.div`
+  position: fixed;
+  right: 115px;
+  top: 0px;
+  bottom: 0px;
+  width: 2px;
+
+  background: #f0f0f0;
 `;

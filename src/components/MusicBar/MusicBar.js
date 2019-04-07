@@ -19,6 +19,7 @@ const MusicDiv = styled.div`
   background-color: #000;
   top: 90%;
   justify-content: space-around;
+  z-index: 20;
 `;
 const SongImageDescription = styled.div`
   display: flex;
@@ -85,88 +86,88 @@ const VolumeInput = styled.input`
   margin: 10px 0;
   width: 60px;
 
-&&:focus {
-  outline: none;
-}
-&&::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 6px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 1px 1px 1px #ffffff;
-  background: #ffffff;
-  border-radius: 5px;
-  border: 1px solid #fffefe;
-}
-&&::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000;
-  border: 5px solid #fff4f4;
-  height: 17px;
-  width: 10px;
-  border-radius: 5px;
-  background: #000000;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -8.5px;
-}
-&&:focus::-webkit-slider-runnable-track {
-  background: #ffffff;
-}
-&&::-moz-range-track {
-  width: 100%;
-  height: 6px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 1px 1px 1px #ffffff;
-  background: #ffffff;
-  border-radius: 5px;
-  border: 1px solid #fffefe;
-}
-&&::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000000;
-  border: 5px solid #fff4f4;
-  height: 17px;
-  width: 10px;
-  border-radius: 5px;
-  background: #000000;
-  cursor: pointer;
-}
-&&::-ms-track {
-  width: 100%;
-  height: 6px;
-  cursor: pointer;
-  animate: 0.2s;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-&&::-ms-fill-lower {
-  background: #ffffff;
-  border: 1px solid #fffefe;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px #ffffff;
-}
-&&::-ms-fill-upper {
-  background: #ffffff;
-  border: 1px solid #fffefe;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px #ffffff;
-}
-&&::-ms-thumb {
-  box-shadow: 1px 1px 1px #000000;
-  border: 5px solid #fff4f4;
-  height: 17px;
-  width: 10px;
-  border-radius: 5px;
-  background: #000000;
-  cursor: pointer;
-}
-&&:focus::-ms-fill-lower {
-  background: #ffffff;
-}
-&&:focus::-ms-fill-upper {
-  background: #ffffff;
-}
+  &&:focus {
+    outline: none;
+  }
+  &&::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #ffffff;
+    background: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #fffefe;
+  }
+  &&::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 5px solid #fff4f4;
+    height: 17px;
+    width: 10px;
+    border-radius: 5px;
+    background: #000000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8.5px;
+  }
+  &&:focus::-webkit-slider-runnable-track {
+    background: #ffffff;
+  }
+  &&::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #ffffff;
+    background: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #fffefe;
+  }
+  &&::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 5px solid #fff4f4;
+    height: 17px;
+    width: 10px;
+    border-radius: 5px;
+    background: #000000;
+    cursor: pointer;
+  }
+  &&::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  &&::-ms-fill-lower {
+    background: #ffffff;
+    border: 1px solid #fffefe;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #ffffff;
+  }
+  &&::-ms-fill-upper {
+    background: #ffffff;
+    border: 1px solid #fffefe;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #ffffff;
+  }
+  &&::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 5px solid #fff4f4;
+    height: 17px;
+    width: 10px;
+    border-radius: 5px;
+    background: #000000;
+    cursor: pointer;
+  }
+  &&:focus::-ms-fill-lower {
+    background: #ffffff;
+  }
+  &&:focus::-ms-fill-upper {
+    background: #ffffff;
+  }
 `;
 const VolumeSection = styled.div`
   display: flex;
@@ -181,88 +182,88 @@ const Slider = styled.input`
   margin: 10px 0;
   width: 250px;
 
-&&:focus {
-  outline: none;
-}
-&&::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 6px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 1px 1px 1px #ffffff;
-  background: #ffffff;
-  border-radius: 5px;
-  border: 1px solid #fffefe;
-}
-&&::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000;
-  border: 5px solid #fff4f4;
-  height: 17px;
-  width: 10px;
-  border-radius: 5px;
-  background: #000000;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -8.5px;
-}
-&&:focus::-webkit-slider-runnable-track {
-  background: #ffffff;
-}
-&&::-moz-range-track {
-  width: 100%;
-  height: 6px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 1px 1px 1px #ffffff;
-  background: #ffffff;
-  border-radius: 5px;
-  border: 1px solid #fffefe;
-}
-&&::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000000;
-  border: 5px solid #fff4f4;
-  height: 17px;
-  width: 10px;
-  border-radius: 5px;
-  background: #000000;
-  cursor: pointer;
-}
-&&::-ms-track {
-  width: 100%;
-  height: 6px;
-  cursor: pointer;
-  animate: 0.2s;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-&&::-ms-fill-lower {
-  background: #ffffff;
-  border: 1px solid #fffefe;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px #ffffff;
-}
-&&::-ms-fill-upper {
-  background: #ffffff;
-  border: 1px solid #fffefe;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px #ffffff;
-}
-&&::-ms-thumb {
-  box-shadow: 1px 1px 1px #000000;
-  border: 5px solid #fff4f4;
-  height: 17px;
-  width: 10px;
-  border-radius: 5px;
-  background: #000000;
-  cursor: pointer;
-}
-&&:focus::-ms-fill-lower {
-  background: #ffffff;
-}
-&&:focus::-ms-fill-upper {
-  background: #ffffff;
-}
+  &&:focus {
+    outline: none;
+  }
+  &&::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #ffffff;
+    background: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #fffefe;
+  }
+  &&::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 5px solid #fff4f4;
+    height: 17px;
+    width: 10px;
+    border-radius: 5px;
+    background: #000000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8.5px;
+  }
+  &&:focus::-webkit-slider-runnable-track {
+    background: #ffffff;
+  }
+  &&::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #ffffff;
+    background: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #fffefe;
+  }
+  &&::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 5px solid #fff4f4;
+    height: 17px;
+    width: 10px;
+    border-radius: 5px;
+    background: #000000;
+    cursor: pointer;
+  }
+  &&::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  &&::-ms-fill-lower {
+    background: #ffffff;
+    border: 1px solid #fffefe;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #ffffff;
+  }
+  &&::-ms-fill-upper {
+    background: #ffffff;
+    border: 1px solid #fffefe;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #ffffff;
+  }
+  &&::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 5px solid #fff4f4;
+    height: 17px;
+    width: 10px;
+    border-radius: 5px;
+    background: #000000;
+    cursor: pointer;
+  }
+  &&:focus::-ms-fill-lower {
+    background: #ffffff;
+  }
+  &&:focus::-ms-fill-upper {
+    background: #ffffff;
+  }
 `;
 export default function MusicBar() {
   const player = useRef(null);
@@ -314,12 +315,19 @@ export default function MusicBar() {
           <SongImage src={albumMusic} />
           <SongDescription>
             <SongLabel>React Podcast</SongLabel>
-            <SongMiniText>41: Be Super with TypeScript and Jared Palmer. On the when, where, what, why, and how much of TypeScript in React.</SongMiniText>
+            <SongMiniText>
+              41: Be Super with TypeScript and Jared Palmer. On the when, where,
+              what, why, and how much of TypeScript in React.
+            </SongMiniText>
           </SongDescription>
         </SongImageDescription>
         <ControlSection>
           <ButtonSection>
-            <SkipPreviousIcon color="#fff" size={"24px"} style={{cursor:"pointer"}}/>
+            <SkipPreviousIcon
+              color="#fff"
+              size={"24px"}
+              style={{ cursor: "pointer" }}
+            />
             <PlayButton onClick={playPauseMusic}>
               {renderIf(!playing)(
                 <PlayCircleOutlineIcon color="#fff" size={"24px"} />
@@ -328,7 +336,11 @@ export default function MusicBar() {
                 <PauseCircleOutlineIcon color="#fff" size={"24px"} />
               )}
             </PlayButton>
-            <SkipNextIcon color="#fff" size="24px" style={{cursor:"pointer"}}/>
+            <SkipNextIcon
+              color="#fff"
+              size="24px"
+              style={{ cursor: "pointer" }}
+            />
           </ButtonSection>
           <DurationSection>
             <Duration time={duration * played} />
