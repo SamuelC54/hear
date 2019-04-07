@@ -3,12 +3,12 @@ import renderIf from "render-if";
 import styled, { css } from "styled-components";
 import ReactPlayer from "react-player";
 
-import song from "../../assets/41_Jared_Palmer.mp3";
+import song from "../../assets/testaudio.mp3";
 import PlayCircleOutlineIcon from "mdi-react/PlayCircleOutlineIcon";
 import PauseCircleOutlineIcon from "mdi-react/PauseCircleOutlineIcon";
 import SkipNextIcon from "mdi-react/SkipNextIcon";
 import SkipPreviousIcon from "mdi-react/SkipPreviousIcon";
-import albumMusic from "../../assets/react.jpg";
+import albumMusic from "../../assets/podcastCover.png";
 import VolumeHighIcon from "mdi-react/VolumeHighIcon";
 
 const MusicDiv = styled.div`
@@ -313,8 +313,8 @@ export default function MusicBar() {
         <SongImageDescription>
           <SongImage src={albumMusic} />
           <SongDescription>
-            <SongLabel>React Podcast</SongLabel>
-            <SongMiniText>41: Be Super with TypeScript and Jared Palmer. On the when, where, what, why, and how much of TypeScript in React.</SongMiniText>
+            <SongLabel>99% Invisible</SongLabel>
+            <SongMiniText>62: Being True to Oneself</SongMiniText>
           </SongDescription>
         </SongImageDescription>
         <ControlSection>
