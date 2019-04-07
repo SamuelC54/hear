@@ -32,12 +32,32 @@ export default function App() {
     });
   }, []);
 
+
+  if (!data) {
+    return (
+      <>
+      </>
+    );
+  };
+
   console.log(data);
+  const entities = _.filter(data.entitiesResult.entities, (entity) => {
+    return entity.wikipedia_url
+  });
+  console.log(entities);
+
+  const entitiesDict = {}
+  _.forEach(entities, (entity) => {
+    entitiesDict[entity.name] = entity.wikipedia_url
+  })
+
+  const numParagraphs = (data.transcriptions).length;
+  console.log(numParagraphs);
 
   return (
     <>
       <NavBar />
-      <Content />
+      <Content categories={data.categoryResult} entities={entitiesDict} numParagraphs={numParagraphs}/>
       <MusicBar />
     </>
   );
