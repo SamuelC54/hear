@@ -26,7 +26,7 @@ const RightPanelWrapper = styled.div`
 
 const RightPanel = styled.div`
   background: #FFFFFF;
-  padding-left: 80px;
+  padding-left: 60px;
   padding-right: 275px;
   padding-top: 40px;
   height: auto;
@@ -45,18 +45,22 @@ const HeaderOpaque = styled.div`
   padding: 55px 100px;
 
 `;
+
 const EpisodeInfo = styled.div`
   display: flex;
   flex-direction: row;
 `;
+
 const EpCover = styled.div`
   height: 100px;
   width: 100px;
   background: lightblue;
 `;
+
 const EpText = styled.div`
   padding: 0 30px;
 `;
+
 const Title = styled.div`
   font-size: 28px;
   letter-spacing: 0.1em;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -29,6 +29,20 @@ import testtranscript from '../../assets/testtranscript.json';
 import Truck from '../../assets/test.png';
 
 export default function Content() {
+  // const [scrollPos, setScrollPos] = useState(window.pageYOffset)
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', this.listenToScroll);
+
+  //   const height =
+  //   document.documentElement.scrollHeight -
+  //   document.documentElement.clientHeight;
+
+  //   const scrolled = winScroll / height
+
+  //   setScrollPos()  
+  // }, [])
+  
   return (
     <>
       <BodyWrapper>
