@@ -9,11 +9,22 @@ import Typography from '@material-ui/core/Typography';
 import { 
   BodyWrapper,
   LeftPanel,
+  RightPanelWrapper,
   RightPanel,
-  TranscriptHeader,
+  
+  Header,
+  HeaderOpaque,
+  EpisodeInfo,
+  EpCover,
+  EpText,
+  Title,
+  Author,
+  
   TranscriptText
 } from './content_cmpnts';
 import './content.css';
+
+import testtranscript from '../../assets/testtranscript.json';
 
 import Truck from '../../assets/test.png';
 
@@ -42,10 +53,22 @@ export default function Content() {
           </Card>
         </LeftPanel>
 
-        <RightPanel>
-          <TranscriptHeader>This is a header</TranscriptHeader>
-          <TranscriptText>This is a body</TranscriptText>
-        </RightPanel>
+        <RightPanelWrapper>
+          <Header>
+            <HeaderOpaque>
+              <EpisodeInfo>
+                <EpCover />
+                <EpText>
+                  <Title>Title</Title>
+                  <Author>Author</Author>
+                </EpText>
+              </EpisodeInfo>
+            </HeaderOpaque>
+          </Header>
+          <RightPanel>
+            <TranscriptText>{testtranscript["transcript"]}</TranscriptText>
+          </RightPanel>
+        </RightPanelWrapper>
       </BodyWrapper>
     </>
   );
