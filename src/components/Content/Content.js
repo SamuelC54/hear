@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import React, { useState, useEffect } from "react";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import styled, { css } from "styled-components";
 
-import _ from 'lodash';
-import renderIf from 'render-if';
+import _ from "lodash";
+import renderIf from "render-if";
 
-import { 
+import {
   BodyWrapper,
   LeftPanel,
   RightPanelWrapper,
   RightPanel,
-  
   Header,
   HeaderOpaque,
   EpisodeInfo,
@@ -22,44 +22,41 @@ import {
   EpText,
   Title,
   Author,
-  
   ParagraphWrapper,
   TranscriptText,
   Category,
   CategoryButton
-} from './content_cmpnts';
-import './content.css';
+} from "./content_cmpnts";
+import "./content.css";
 
-import testtranscript from '../../assets/testtranscript.json';
+import testtranscript from "../../assets/testtranscript.json";
 
-import Truck from '../../assets/test.png';
+import Truck from "../../assets/test.png";
 
 export default function Content(props) {
-
   const leng = Array(props.numParagraphs);
 
   return (
     <>
       <BodyWrapper>
         <LeftPanel>
-          <Card>
-            <CardActionArea className="card_actionarea">
-              <CardMedia
-                component="img"
-                alt="Contemplative Reptile"
-                height="140"
-                image={Truck}
-                title="Contemplative Reptile"
-                className="cardmedia"
-              />
-              <CardContent>
-                <Typography component="p">
-                  Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                  across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+          {_.map(props.entities, (entity, i) => (
+            <StyledCard key={i}>
+              <CardActionArea className="card_actionarea">
+                <CardMedia
+                  component="img"
+                  alt="Contemplative Reptile"
+                  height="140"
+                  image={entity.picture}
+                  title="Contemplative Reptile"
+                  className="cardmedia"
+                />
+                <CardContent>
+                  <Typography component="p">{entity.summary}</Typography>
+                </CardContent>
+              </CardActionArea>
+            </StyledCard>
+          ))}
         </LeftPanel>
 
         <RightPanelWrapper>
@@ -78,19 +75,42 @@ export default function Content(props) {
             {props.categories.map((item, i) => {
               return (
                 <ParagraphWrapper key={i}>
-                  <TranscriptText>{item.content.split(" ").map((word, i) => {
-                    return <span key={i}><a href={props.entities[word]} target="_blank">{word}</a> </span>
-                  })}</TranscriptText>
+                  <TranscriptText>
+                    {item.content.split(" ").map((word, i) => {
+                      return (
+                        <span key={i}>
+                          <a
+                            href={
+                              props.entities[word] &&
+                              props.entities[word].wikipedia_url
+                            }
+                            target="_blank"
+                          >
+                            {word}
+                          </a>{" "}
+                        </span>
+                      );
+                    })}
+                  </TranscriptText>
                   {renderIf(_.get(item, "categories[0].name"))(() => (
                     <Category>
-                      <CategoryButton>{(item.categories[0].name).split("/")[1]}</CategoryButton>
+                      <CategoryButton>
+                        {item.categories[0].name.split("/")[1]}
+                      </CategoryButton>
                     </Category>
-                  ))} 
+                  ))}
                 </ParagraphWrapper>
-              )})}
+              );
+            })}
           </RightPanel>
         </RightPanelWrapper>
       </BodyWrapper>
     </>
   );
+}
+
+const StyledCard = styled(Card)`
+  && {
+    margin: 16px 0;
   }
+`;
