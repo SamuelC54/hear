@@ -8,15 +8,8 @@ import styled, { css } from "styled-components";
 import firebase from "firebase";
 import { Route, Switch } from "react-router-dom";
 import useReactRouter from "use-react-router";
-import {
-  GoogleMap,
-  withGoogleMap,
-  withScriptjs,
-  Marker,
-  OverlayView
-} from "react-google-maps";
-import { Column, Table } from "react-virtualized";
 import ReactPlayer from "react-player";
+
 import NavBar from "./components/NavBar/NavBar";
 import MusicBar from "./components/MusicBar/MusicBar";
 import Content from "./components/Content/Content";
@@ -24,24 +17,31 @@ import Content from "./components/Content/Content";
 // pass: y9de%ua03CbKPlehnkrnH4!rhrqo@tY%k4
 
 firebase.initializeApp({
-  apiKey: "AIzaSyBcrLPp_JLrY47-luw6dJiNiFLrCrDU4Pg",
-  authDomain: "bdc-hackathon.firebaseapp.com",
-  databaseURL: "https://bdc-hackathon.firebaseio.com",
-  projectId: "bdc-hackathon",
-  storageBucket: "bdc-hackathon.appspot.com",
-  messagingSenderId: "955736340124"
+  apiKey: "AIzaSyAvkLDjAaxFKIpZyR1Jv6VD7loYDyb-0_k",
+  authDomain: "poddie-37316.firebaseapp.com",
+  databaseURL: "https://poddie-37316.firebaseio.com",
+  projectId: "poddie-37316",
+  storageBucket: "poddie-37316.appspot.com",
+  messagingSenderId: "420732162852"
 });
 
-const firestore = firebase.firestore();
+const database = firebase.database();
 
 export default function App() {
+  const [data, setData] = useState(undefined);
+
+  useEffect(() => {
+    var starCountRef = database.ref("database");
+    starCountRef.on("value", function(snapshot) {
+      setData(snapshot.val());
+    });
+  }, []);
 
   return (
     <>
       <NavBar />
       <Content />
-      <MusicBar/>
+      <MusicBar />
     </>
   );
 }
-
