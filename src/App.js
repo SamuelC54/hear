@@ -2,13 +2,8 @@
 /*global google*/
 
 import _ from "lodash";
-import React, { useEffect, useState, useRef } from "react";
-import renderIf from "render-if";
-import styled, { css } from "styled-components";
+import React, { useEffect, useState} from "react";
 import firebase from "firebase";
-import { Route, Switch } from "react-router-dom";
-import useReactRouter from "use-react-router";
-import ReactPlayer from "react-player";
 
 import NavBar from "./components/NavBar/NavBar";
 import MusicBar from "./components/MusicBar/MusicBar";
@@ -37,10 +32,32 @@ export default function App() {
     });
   }, []);
 
+
+  if (!data) {
+    return (
+      <>
+      </>
+    );
+  };
+
+  console.log(data);
+  const entities = _.filter(data.entitiesResult.entities, (entity) => {
+    return entity.wikipedia_url
+  });
+  console.log(entities);
+
+  const entitiesDict = {}
+  _.forEach(entities, (entity) => {
+    entitiesDict[entity.name] = entity.wikipedia_url
+  })
+
+  const numParagraphs = (data.transcriptions).length;
+  console.log(numParagraphs);
+
   return (
     <>
       <NavBar />
-      <Content />
+      <Content categories={data.categoryResult} entities={entitiesDict} numParagraphs={numParagraphs}/>
       <MusicBar />
     </>
   );

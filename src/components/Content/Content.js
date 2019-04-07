@@ -6,6 +6,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import _ from 'lodash';
+import renderIf from 'render-if';
+
 import { 
   BodyWrapper,
   LeftPanel,
@@ -20,7 +23,10 @@ import {
   Title,
   Author,
   
-  TranscriptText
+  ParagraphWrapper,
+  TranscriptText,
+  Category,
+  CategoryButton
 } from './content_cmpnts';
 import './content.css';
 
@@ -28,8 +34,10 @@ import testtranscript from '../../assets/testtranscript.json';
 
 import Truck from '../../assets/test.png';
 
-export default function Content() {
- 
+export default function Content(props) {
+
+  const leng = Array(props.numParagraphs);
+
   return (
     <>
       <BodyWrapper>
@@ -67,7 +75,19 @@ export default function Content() {
             </HeaderOpaque>
           </Header>
           <RightPanel>
-            <TranscriptText>{testtranscript["transcript"]}</TranscriptText>
+            {props.categories.map((item, i) => {
+              return (
+                <ParagraphWrapper key={i}>
+                  <TranscriptText>{item.content.split(" ").map((word, i) => {
+                    return <span key={i}><a href={props.entities[word]} target="_blank">{word}</a> </span>
+                  })}</TranscriptText>
+                  {renderIf(_.get(item, "categories[0].name"))(() => (
+                    <Category>
+                      <CategoryButton>{(item.categories[0].name).split("/")[1]}</CategoryButton>
+                    </Category>
+                  ))} 
+                </ParagraphWrapper>
+              )})}
           </RightPanel>
         </RightPanelWrapper>
       </BodyWrapper>

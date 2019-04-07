@@ -27,7 +27,6 @@ const RightPanelWrapper = styled.div`
 const RightPanel = styled.div`
   background: #FFFFFF;
   padding-left: 60px;
-  padding-right: 275px;
   padding-top: 40px;
   height: auto;
 `;
@@ -80,13 +79,35 @@ const Author = styled.div`
   font-weight: 400;
 `;
 
+const ParagraphWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 const TranscriptText = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 0.05em;
   line-height: 2em;
   font-family: 'Roboto';
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  width: 65%;
+`;
+
+const Category = styled.div`
+  width: 35%;
+  text-align: center;
+  padding: 20px 25px;
+`;
+
+const CategoryButton = styled.div`
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  line-height: 2em;
+  font-family: 'Roboto';
+  background: #F0F0F0;
+  padding: 0px 5px;
+  color: black;
+  border-radius: 15px;
 `;
 
 export {
@@ -103,5 +124,8 @@ export {
   Title,
   Author,
   
-  TranscriptText
+  ParagraphWrapper,
+  TranscriptText,
+  Category,
+  CategoryButton
 }

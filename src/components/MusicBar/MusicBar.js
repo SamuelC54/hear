@@ -12,7 +12,7 @@ import albumMusic from "../../assets/react.jpg";
 import VolumeHighIcon from "mdi-react/VolumeHighIcon";
 
 const MusicDiv = styled.div`
-  position: absolute;
+  position: fixed;
   display: flex;
   width: 100%;
   height: 10%;
@@ -28,6 +28,7 @@ const PlayButton = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 `;
 const ControlSection = styled.div`
   width: calc(100% / 3);
@@ -63,9 +64,11 @@ const SongLabel = styled.div`
   color: #ffffff;
 `;
 const SongDescription = styled.div`
-  margin-top: 26px;
+  margin-top: 18px;
   display: flex;
   flex-direction: column;
+  width: auto;
+  text-overflow: wrap;
 `;
 const SongMiniText = styled.div`
   font-family: Roboto;
@@ -316,7 +319,7 @@ export default function MusicBar() {
         </SongImageDescription>
         <ControlSection>
           <ButtonSection>
-            <SkipPreviousIcon color="#fff" size={"24px"} />
+            <SkipPreviousIcon color="#fff" size={"24px"} style={{cursor:"pointer"}}/>
             <PlayButton onClick={playPauseMusic}>
               {renderIf(!playing)(
                 <PlayCircleOutlineIcon color="#fff" size={"24px"} />
@@ -325,7 +328,7 @@ export default function MusicBar() {
                 <PauseCircleOutlineIcon color="#fff" size={"24px"} />
               )}
             </PlayButton>
-            <SkipNextIcon color="#fff" size="24px" />
+            <SkipNextIcon color="#fff" size="24px" style={{cursor:"pointer"}}/>
           </ButtonSection>
           <DurationSection>
             <Duration time={duration * played} />
