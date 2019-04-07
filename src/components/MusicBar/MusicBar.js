@@ -341,7 +341,7 @@ export default function MusicBar() {
           <SongImage src={albumMusic} />
           <SongDescription>
             <SongLabel>99% Invisible</SongLabel>
-            <SongMiniText>62: Being True to Oneself</SongMiniText>
+            <SongMiniText>Episode 341: National Sword</SongMiniText>
           </SongDescription>
         </SongImageDescription>
         <ControlSection>
