@@ -4,6 +4,7 @@ const BodyWrapper = styled.div`
   display: flex;
   background: lightpink;
   padding-top: 80px;
+  padding-bottom: 
   width: 100vw;
   flex-direction: row;
 `;

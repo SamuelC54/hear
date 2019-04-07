@@ -174,7 +174,7 @@ const VolumeSection = styled.div`
   align-items: center;
   width: calc(100% / 3);
   justify-content: flex-end;
-  padding-right: 20px;
+  padding-right: 60px;
 `;
 
 const Slider = styled.input`
