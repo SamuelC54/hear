@@ -1,3 +1,5 @@
+https://devpost.com/software/hear-podcasts-made-accessible
+
 # Inspiration
 
 What inspired us was the relatively bad experiences we had when trying to find transcriptions for podcasts we regularly listened to. That got us thinking, if we are having trouble finding transcriptions how are people that are deaf or hard of hearing even listening or consuming this form of media? With all of the available tools we wondered how and why there was no cost-effective and user friendly solution to make podcasts accessible to all.
